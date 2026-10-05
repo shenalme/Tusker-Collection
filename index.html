@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serandib — Tusker</title>
+  <meta name="description" content="Serandib presents Tusker — decorative pillows inspired by Sri Lankan craft, colour and stories.">
+  <style>
+    :root{
+      --ink:#17211c; --cream:#f4efe5; --sand:#d9cbb6;
+      --gold:#b58a3b; --teal:#0e5d61; --rust:#9a5436;
+      --paper:#fbf8f1; --line:rgba(23,33,28,.16);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+    h1,h2,h3,p{margin:0}
+    a{color:inherit;text-decoration:none}
+    .nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:26px 5vw;color:#fff}
+    .logo{font-family:Georgia,serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
+    .navlinks{display:flex;gap:28px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+    .hero{min-height:92vh;background:linear-gradient(90deg,rgba(8,24,20,.72),rgba(8,24,20,.12)),url("tusker-reference.jpeg") center/cover;display:flex;align-items:end;padding:10vh 5vw 9vh;color:#fff}
+    .hero-inner{max-width:760px}
+    .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#e7c67c;margin-bottom:18px}
+    h1{font-family:Georgia,serif;font-size:clamp(4rem,10vw,8.8rem);font-weight:400;line-height:.88;letter-spacing:-.055em}
+    .hero p{font-family:Georgia,serif;font-size:clamp(1.1rem,2vw,1.55rem);max-width:620px;margin-top:28px;color:#f5eee2}
+    .button{display:inline-block;margin-top:34px;padding:14px 22px;border:1px solid rgba(255,255,255,.65);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+    .section{padding:110px 5vw}
+    .intro{display:grid;grid-template-columns:1fr 1.25fr;gap:8vw;align-items:start;background:var(--cream)}
+    .kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rust)}
+    h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(2.6rem,5vw,5.2rem);line-height:.98;letter-spacing:-.04em}
+    .copy{font-family:Georgia,serif;font-size:clamp(1.15rem,2vw,1.55rem);max-width:720px}
+    .copy + .copy{margin-top:24px}
+    .product{display:grid;grid-template-columns:1.1fr .9fr;min-height:760px;background:var(--ink);color:#fff}
+    .product-image{min-height:600px;background:url("tusker-reference.jpeg") center/cover}
+    .product-info{padding:8vw 6vw;display:flex;flex-direction:column;justify-content:center}
+    .product-info .kicker{color:#d9b766}
+    .product-info h2{margin:18px 0 28px}
+    .details{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.2);margin-top:42px}
+    .detail{padding:20px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:.8rem}
+    .detail span{display:block;color:#aeb8b0;text-transform:uppercase;letter-spacing:.12em;font-size:.65rem;margin-bottom:6px}
+    .story{background:var(--teal);color:#f5f1e8;text-align:center}
+    .story .inner{max-width:900px;margin:auto}
+    .story h2{font-size:clamp(3rem,7vw,7rem)}
+    .story p{font-family:Georgia,serif;font-size:1.25rem;max-width:700px;margin:30px auto 0}
+    .manifesto{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);padding:0}
+    .manifesto article{padding:60px 4vw;background:var(--paper)}
+    .manifesto h3{font-family:Georgia,serif;font-size:1.8rem;font-weight:400;margin:14px 0}
+    .manifesto p{color:#53605a}
+    .waitlist{background:var(--sand);text-align:center}
+    .waitlist-inner{max-width:680px;margin:auto}
+    .waitlist h2{margin:16px 0 22px}
+    form{display:flex;max-width:560px;margin:36px auto 0}
+    input{flex:1;padding:17px;border:1px solid rgba(23,33,28,.35);background:rgba(255,255,255,.55);font:inherit}
+    button{padding:17px 24px;border:0;background:var(--ink);color:#fff;letter-spacing:.12em;text-transform:uppercase;font-size:.7rem}
+    footer{display:flex;justify-content:space-between;padding:30px 5vw;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+    @media(max-width:800px){
+      .navlinks{display:none}
+      .intro,.product{grid-template-columns:1fr}
+      .product-image{min-height:500px}
+      .manifesto{grid-template-columns:1fr}
+      form{flex-direction:column;gap:8px}
+      .hero{min-height:82vh}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="#">Serandib</a>
+    <div class="navlinks">
+      <a href="#tusker">Tusker</a>
+      <a href="#story">Our story</a>
+      <a href="#waitlist">Early access</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Serandib / Home, reimagined</div>
+      <h1>Tusker</h1>
+      <p>A new language for the Sri Lankan pillow — expressive, tactile and made to bring a little island character into the room.</p>
+      <a class="button" href="#tusker">Discover the first piece</a>
+    </div>
+  </header>
+
+  <section class="section intro">
+    <div>
+      <div class="kicker">The idea</div>
+      <h2>Objects with a sense of place.</h2>
+    </div>
+    <div>
+      <p class="copy">Serandib is a home brand inspired by Sri Lanka: its animals, ornament, colour, craft traditions and the easy richness of everyday life.</p>
+      <p class="copy">Tusker is the first collection — a series of statement pillows designed to feel at home on a modern sofa while carrying a distinctly Sri Lankan point of view.</p>
+    </div>
+  </section>
+
+  <section id="tusker" class="product">
+    <div class="product-image" role="img" aria-label="Tusker elephant embroidered pillow"></div>
+    <div class="product-info">
+      <div class="kicker">Tusker / No. 01</div>
+      <h2>The Elephant</h2>
+      <p class="copy">An embroidered elephant becomes the centrepiece: black, ivory, teal and warm gold, with ornamental details inspired by the visual language of the island.</p>
+      <div class="details">
+        <div class="detail"><span>Collection</span>Tusker</div>
+        <div class="detail"><span>Edition</span>No. 01</div>
+        <div class="detail"><span>Category</span>Decorative pillow</div>
+        <div class="detail"><span>Status</span>Launching soon</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section story">
+    <div class="inner">
+      <div class="kicker">Why Serandib</div>
+      <h2>From the island, for the world.</h2>
+      <p>We believe Sri Lankan design deserves a place in contemporary homes everywhere — not as a souvenir, but as something collected, lived with and loved.</p>
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <article>
+      <div class="kicker">01</div>
+      <h3>Distinctly Sri Lankan</h3>
+      <p>Start with recognisable island motifs and translate them into a refined contemporary home aesthetic.</p>
+    </article>
+    <article>
+      <div class="kicker">02</div>
+      <h3>Made to collect</h3>
+      <p>Each Tusker design can stand alone, then become part of a larger visual world across a sofa, room or home.</p>
+    </article>
+    <article>
+      <div class="kicker">03</div>
+      <h3>Story first</h3>
+      <p>Every piece should have a name, a visual reference and a reason to exist — giving customers something to talk about.</p>
+    </article>
+  </section>
+
+  <section id="waitlist" class="section waitlist">
+    <div class="waitlist-inner">
+      <div class="kicker">The first drop</div>
+      <h2>Be first to meet Tusker.</h2>
+      <p class="copy">Join the early-access list for the launch of Serandib and the first Tusker collection.</p>
+      <form onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;font-family:Georgia,serif;font-size:1.2rem&quot;>You’re on the list. Thank you.</p>';">
+        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <span>Serandib © 2026</span>
+    <span>Tusker / No. 01</span>
+  </footer>
+</body>
+</html>
